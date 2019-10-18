@@ -1,0 +1,228 @@
+
+
+/* ============== Banner and Navbar (common for all pages) ============== */
+
+$navColor: #1c1500;
+$navHoverColor: #523603;
+$navHoverText:#fde0be;
+$navActiveColor:#ecdada;
+$navActiveText:#792808;
+$centerBoxColor:rgb(255, 247, 219, 0.75);
+
+%center_page{
+    margin: auto;
+    width: 1140px;
+    position:center;
+}
+
+@media screen and (max-width: 1200px){
+    %center_page{
+        width:960px;
+    }
+}
+
+@media screen and (max-width: 991px){
+    %center_page{
+        width:720px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    %center_page{
+        width:540px;
+    }
+}
+
+@media screen and (max-width: 575px){
+    %center_page{
+        width:100%;
+    }   
+}
+
+.body{
+    background-image: url("../images/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: black;
+}
+
+.entire-page {
+    @extend %center_page;
+}
+
+.banner{
+    padding-top: 5px;
+    position: static;
+    margin-top:-150px;
+    margin-bottom:90px;
+
+    img{
+        width: 400px;
+        height: auto;
+        margin-left: -20px;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .banner a img{
+        margin-left: -15px;
+    }
+}
+
+.topnav {
+	background-color: $navColor;
+	overflow: hidden;
+	position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top:0;
+	margin-top: 100px;
+    width: 100%;
+	z-index: 69;
+
+    .envelope{
+        @extend %center_page;
+
+        a{
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            background-color: $navHoverColor;
+            color: $navHoverText;
+            transition: .5s;
+        }
+
+        a.active {
+            background-color: $navActiveColor;
+            color: $navActiveText;       
+        }
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .banner a img{
+        width: 350px;
+    }
+    .topnav a{
+      font-size: 15px;
+
+  }
+}
+
+/* ====================== index.html ==================== */
+
+.container{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    background-color: $centerBoxColor;
+    border: solid 1px white;
+    float: center;
+
+
+    h2{
+        padding-top: 20px;
+        color: black;
+        font-weight: bold;
+    }
+
+    p{
+        color: black;
+        font-size: 18px;
+    }
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#demo {
+    margin: auto;
+    width: inherit;
+    border:solid 1px white;
+    margin-bottom: 30px;
+}
+
+.carousel-inner .carousel-item img{
+    float: center;
+    width: inherit;
+    height: auto;
+}
+/* ====================== about.html ==================== */
+
+.container{
+    
+    .row{
+        padding-top: 30px;
+        margin: auto;
+
+        .col-sm{
+            margin: 10px;
+            border: solid 2px black;
+        
+            h3{
+                text-align: center;
+            }
+
+            p{  
+                text-align: left;
+                font-style: italic;
+
+                ul{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+/* ====================== buy_now.html ==================== */
+
+.container{
+    padding-bottom: 30px;
+
+    table{
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+
+        th{
+            font-size: 20px;
+            padding: 15px;
+            border: solid 1px black;
+            background-color: rgb(250, 250, 210, 0.75);
+        }
+    
+        td{
+            font-size: 20px;
+            border: solid 1px black;
+            padding: 15px;
+
+            a{
+                color: black;
+                text-decoration: none;
+            }
+
+            a:hover{
+                color:red;
+            }
+
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: auto;
+                height: 200px;
+            }
+        }
+    }
+}
+
+/* ====================== contact.html ==================== */
+
